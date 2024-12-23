@@ -8,22 +8,16 @@ import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
-import ProUserRoute from "./ProUserRoute";
-import CreateSurvey from "../pages/Survey/CreateTask";
-import SurveysPage from "../pages/Survey/SurveysPage";
-import Payment from "../pages/Payment/Payment";
-import SurveyDetails from "../pages/Survey/TaskDetails";
-import ManageSurveys from "../pages/Dashboard/ManageSurveys/ManageTasks";
+import CreateSurvey from "../pages/task/CreateTask";
+import SurveyDetails from "../pages/task/TaskDetails";
+import ManageSurveys from "../pages/Dashboard/ManageTask/ManageTasks";
 import DashBoardHome from "../pages/Dashboard/DashBoardHome/DashBoardHome";
 import MySurveyList from "../pages/Dashboard/MySurveyList/MyTaskList";
 import SurveyResponse from "../pages/Dashboard/MySurveyList/TaskActivity";
-import ParticipateInSurvey from "../pages/Dashboard/UserDashboard/ParticipateInSurvey";
 import ReportedSurvey from "../pages/Dashboard/UserDashboard/UserTask";
-import CommentedSurvey from "../pages/Dashboard/UserDashboard/CommentedSurvey";
-import EditSurvey from "../pages/Survey/EditTask";
-import AdminSurveyResponse from "../pages/Dashboard/ManageSurveys/AdminSurveyResponse";
+import EditSurvey from "../pages/task/EditTask";
+
 import AllSurveyResponses from "../pages/Dashboard/AllSurveyResponses";
-import PricePage from "../pages/PricePage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
@@ -76,14 +70,7 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
-      {
-        path: "allSurveyResponses",
-        element: (
-          <AdminRoute>
-            <AllSurveyResponses></AllSurveyResponses>
-          </AdminRoute>
-        ),
-      },
+    
      
       {
         path: "users",
@@ -109,11 +96,7 @@ export const router = createBrowserRouter([
         path: "tasks/:id",
         element: <SurveyDetails></SurveyDetails>,
       },
-      ,
-      {
-        path: "surveyor/surveysResponse/:id",
-        element: <AdminRoute><AdminSurveyResponse></AdminSurveyResponse></AdminRoute>,
-      }
+    
       ,
       {
         path: "user/createtask",
